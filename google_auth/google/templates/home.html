@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    {% if user.isauthenticated %}
+    <h1>Welcome, {{ user.username }}!</h1>
+    {% else %}
+    <h2>{% trans "Welcome Home" %}</h2>
+    <p>Do you want to log in or sign up</p>
+
+    <!-- <a href="{% provider_login_url 'google' %}">{% trans "Continue with google" %}</a>
+    <a href="{% provider_login_url 'github' %}">{% trans "Continue with github" %}</a> -->
+    {% endif %}
+
+</body>
+
+</html>

@@ -19,7 +19,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('accounts/', include("allauth.urls")),
+    path('accounts/', include("allauth.urls")), # Auth social account --- External
+    path('accounts/', include("django.contrib.auth.urls")), # Defaulth django account  ---- Local
     path('', include('google.urls')),
     
 ]
